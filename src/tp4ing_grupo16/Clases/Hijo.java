@@ -2,7 +2,6 @@ package tp4ing_grupo16.Clases;
 
 import java.util.List;
 
-
 /**
  * @author agus1
  * @version 1.0
@@ -10,74 +9,80 @@ import java.util.List;
  */
 public class Hijo extends Padre implements Madre, Hermano, Tio {
 
-	private double billetera;
-	private Celular celular;
-	protected String nombre;
+    private double billetera;
+    private Celular celular;
+    protected String nombre;
 
-	public Hijo(){
-            super();
-	}
-	/**
-	 * 
-	 * @param nombre
-	 * @param celular
-	 * @param billetara
-	 * @param auto
-	 */
-	public Hijo(String nombre, Celular celular, double billetera, Auto auto){
+    public Hijo() {
+        super();
+    }
+
+    /**
+     *
+     * @param nombre
+     * @param celular
+     * @param billetara
+     * @param auto
+     */
+    public Hijo(String nombre, Celular celular, double billetera, Auto auto) {
         this.nombre = nombre;
         this.celular = celular;
         this.billetera = billetera;
         this.auto = auto;
-	}
-        
-        public Auto getAuto() {
+    }
+
+    public Auto getAuto() {
         return auto;
-        }
+    }
 
-        
-        @Override
-	public void bailar(){
+    @Override
+    public void bailar() {
+        System.out.println("Se bailar como a mi madre");
+    }
 
-	}
-        @Override
-	protected String cantar(){
+    @Override
+    protected String cantar() {
         return "Y así canta " + nombre;
-	}
+    }
 
-	/**
-	 * 
-	 * @param Auto
-	 */
-	public void conducirAuto(Auto Auto){
+    /**
+     *
+     * @param Auto
+     */
+    public void conducirAuto(Auto Auto) {
 
-	}
+    }
 
-	public int hacerGoles(){
-		return 0;
-	}
+    public int hacerGoles() {
+        return 0;
+    }
 
-	/**
-	 * 
-	 * @param double
-	 */
-	public void heredarDinero(double cantidad){
-            this.billetera += cantidad;
-	}
+    /**
+     *
+     * @param double
+     */
+    public void heredarDinero(double cantidad) {
+        this.billetera += cantidad;
+    }
 
-	public void jugarFutbol(){
+    public void jugarFutbol() {
+        System.out.println("Se jugar futbol gracias a mi hermano");
+    }
 
-	}
+    public double getFortuna() {
+        return FORTUNA;
+    }
 
-	public double getFortuna(){
-		return FORTUNA;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
     @Override
     public int jugarLoteria() {
+        System.out.println("Heredaste la Fortuna de " + FORTUNA + " de tu madre la ROSA!!");
+        System.out.println("Ahora tienes " + FORTUNA + " U$$ !!!");
         System.out.println("SALIO EL NUMERO DE LA SUERTE: " + NROSUERTE);
         this.billetera += FORTUNA;
-        System.out.println("Heredaste la Fortuna de " + FORTUNA + " de la ROSA!!");
         return NROSUERTE;
     }
 }//end Hijo

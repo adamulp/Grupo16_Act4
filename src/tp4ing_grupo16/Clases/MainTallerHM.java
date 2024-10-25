@@ -14,10 +14,26 @@ public static void main(String[] args) {
     Padre padre = new Padre();
     padre.addAuto(fordFocus);
     padre.addAuto(cascajo);
-    Celular cel = new Celular("Nokia", "123456789", 100.0);
     
+    Celular cel = new Celular("Nokia", "123456789", 100.0);
     Hijo hijo = new Hijo("Juan Carlos", cel, 150.0, cascajo);
     
-     System.out.println("Hijo: " + hijo.nombre + " " + hijo.apellido + ", Auto: " + hijo.getAuto());
-}
+    System.out.println(""
+            + "Papá me dejo esta casa en zona" + padre.casa.getZona()
+            + "(" + padre.casa.getPisos() + ")" + "pisos");
+    
+    System.out.println("Soy el hijo " + hijo.getNombre() + " herede de mi padre "
+            + "su apellido: " + padre.getApellido());
+    
+    System.out.println("Papá Me dejó este auto modelo: " + hijo.getAuto().getModelo());
+    
+    System.out.println("Conduciendo un " + fordFocus.getModelo() + " de un amigo!");
+    hijo.jugarFutbol();
+    hijo.bailar();
+    hijo.jugarLoteria();
+
+    System.out.println("Asi canta tu padre, Don Lopez y asi canta Juan Carlos");
+    System.out.println("MSJ de tiio Lucas: disfruta la herencia Addams, sumas 5200.0 dolaritos");
+    System.out.println("Juagando al Futbol, Hoy has hecho 0 goles");
+ }// end main()
 }//end MainTallerHM
