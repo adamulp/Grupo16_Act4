@@ -8,7 +8,7 @@ package tp4ing_grupo16.Clases;
  */
 public interface Hermano {
 
-	public int hacerGoles();
+	public int hacerGoles(int goles);
 
 	public void jugarFutbol();
 

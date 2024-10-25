@@ -41,8 +41,12 @@ public class Hijo extends Padre implements Madre, Hermano, Tio {
     }
 
     @Override
-    protected String cantar() {
-        return "Y así canta " + nombre;
+	protected String cantar(){
+        String cantoPadre = super.cantar();
+        System.out.println("Así canta tu padre, Don " + apellido);
+        System.out.println("Así canta " + nombre);
+ 
+        return cantoPadre;
     }
 
     /**
@@ -53,8 +57,9 @@ public class Hijo extends Padre implements Madre, Hermano, Tio {
 
     }
 
-    public int hacerGoles() {
-        return 0;
+    @Override
+    public int hacerGoles(int goles) {
+        return goles;
     }
 
     /**
@@ -63,6 +68,8 @@ public class Hijo extends Padre implements Madre, Hermano, Tio {
      */
     public void heredarDinero(double cantidad) {
         this.billetera += cantidad;
+        System.out.println("MSJ de tio Lucas: disfruta la herencia Addams, sumas "
+                + cantidad + " dolaritos");
     }
 
     public void jugarFutbol() {

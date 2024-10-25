@@ -31,9 +31,10 @@ public static void main(String[] args) {
     hijo.jugarFutbol();
     hijo.bailar();
     hijo.jugarLoteria();
-
-    System.out.println("Asi canta tu padre, Don Lopez y asi canta Juan Carlos");
-    System.out.println("MSJ de tiio Lucas: disfruta la herencia Addams, sumas 5200.0 dolaritos");
-    System.out.println("Juagando al Futbol, Hoy has hecho 0 goles");
+    hijo.cantar();
+    hijo.heredarDinero(2000);
+    
+    System.out.println("Juagando al Futbol, Hoy has hecho "
+            + hijo.hacerGoles(0) + " goles");
  }// end main()
 }//end MainTallerHM
