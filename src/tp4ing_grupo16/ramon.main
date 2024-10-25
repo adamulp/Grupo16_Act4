@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        Auto cascajo = new Auto("123LATA", "Renault 12");
+        Auto fordFocus = new Auto("999POWR", "Ford Focus");
+        Celular celular = new Celular("Movistar", "123456789", 50);
+
+        Padre padre = new Padre(fordFocus);
+        System.out.println("Papá me dejó esta casa en zona: " + padre.casa.getZona());
+
+        Hijo juanCarlos = new Hijo("Juan Carlos", celular, cascajo);
+        System.out.println("Papá me dejó este auto: " + juanCarlos.auto.getModelo());
+
+        juanCarlos.conducirAuto(fordFocus);
+        juanCarlos.jugarFutbol();
+        juanCarlos.bailar();
+        System.out.println("SALIO EL NUMERO DE LA SUERTE: " + juanCarlos.jugarLoteria());
+        juanCarlos.cantar();
+        juanCarlos.heredarDinero(2000);
+        System.out.println("Jugando al Futbol, Hoy has hecho " + juanCarlos.hacerGoles() + " goles.");
+    }
+}

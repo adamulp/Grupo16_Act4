@@ -1,0 +1,3 @@
+#!/bin/bash
+javac tp4ing_grupo16/Clases/*.java && \
+java tp4ing_grupo16.Clases.MainTallerHM
